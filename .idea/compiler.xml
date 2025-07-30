@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.34/ec547ef414ab1d2c040118fb9c1c265ada63af14/lombok-1.18.34.jar" />
+        </processorPath>
+        <module name="gmtk25.html.main" />
+        <module name="gmtk25.core.main" />
+      </profile>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.28/a2ff5da8bcd8b1b26f36b806ced63213362c6dcc/lombok-1.18.28.jar" />
+        </processorPath>
+        <module name="gmtk25.lwjgl3.main" />
+        <module name="gmtk25.html.test" />
+        <module name="gmtk25.lwjgl3.test" />
+        <module name="gmtk25.core.test" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="11" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gmtk25.core" options="-Xlint:-processing" />
+      <module name="gmtk25.core.main" options="-Xlint:-processing" />
+      <module name="gmtk25.core.test" options="-Xlint:-processing" />
+      <module name="gmtk25.html" options="-Xlint:-processing" />
+      <module name="gmtk25.html.main" options="-Xlint:-processing" />
+      <module name="gmtk25.html.test" options="-Xlint:-processing" />
+      <module name="gmtk25.lwjgl3" options="-Xlint:-processing" />
+      <module name="gmtk25.lwjgl3.main" options="-Xlint:-processing" />
+      <module name="gmtk25.lwjgl3.test" options="-Xlint:-processing" />
+    </option>
+  </component>
+</project>

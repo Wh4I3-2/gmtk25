@@ -12,11 +12,6 @@ dependencies {
   api "com.crashinvaders.basisu:basisu-wrapper:$gdxBasisUniversalVersion"
   api "com.github.tommyettinger:sjInGameConsole:$inGameConsoleVersion"
   api "com.sudoplay.joise:joise:$joiseVersion"
-  api "io.github.spair:imgui-java-binding:1.89.0"
-  api "io.github.spair:imgui-java-lwjgl3:1.89.0"
-  api "io.github.spair:imgui-java-natives-linux:1.89.0"
-  api "io.github.spair:imgui-java-natives-macos:1.89.0"
-  api "io.github.spair:imgui-java-natives-windows:1.89.0"
   annotationProcessor "org.projectlombok:lombok:$lombokVersion"
   compileOnly "org.projectlombok:lombok:$lombokVersion"
 

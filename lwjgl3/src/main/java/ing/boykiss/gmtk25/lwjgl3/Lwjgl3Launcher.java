@@ -3,11 +3,6 @@ package ing.boykiss.gmtk25.lwjgl3;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
-import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Graphics;
-import imgui.ImGui;
-import imgui.ImGuiIO;
-import imgui.gl3.ImGuiImplGl3;
-import imgui.glfw.ImGuiImplGlfw;
 import ing.boykiss.gmtk25.Main;
 
 import static com.badlogic.gdx.Gdx.*;
@@ -20,35 +15,6 @@ public class Lwjgl3Launcher {
     }
 
     private static Lwjgl3Application createApplication() {
-        new Thread(() -> {
-            // For whatever reason ImGui doesn't get initialized here if I don't print
-            // I decided to just let this black magic stay
-            while (true) {
-                if (app == null) {
-                    System.out.print("");
-                    continue;
-                }
-                if (graphics == null) {
-                    System.out.print("");
-                    continue;
-                }
-                app.postRunnable(() -> {
-                    Main.imGuiGlfw = new ImGuiImplGlfw();
-                    Main.imGuiGl3 = new ImGuiImplGl3();
-                    long windowHandle = ((Lwjgl3Graphics) Gdx.graphics).getWindow().getWindowHandle();
-                    ImGui.createContext();
-                    ImGuiIO io = ImGui.getIO();
-                    io.setIniFilename(null);
-                    io.getFonts().addFontDefault();
-                    io.getFonts().build();
-                    Main.imGuiGlfw.init(windowHandle, true);
-                    Main.imGuiGl3.init("#version 150");
-                    Main.imGuiInitialized = true;
-                    System.out.println("initialized imgui");
-                });
-                break;
-            }
-        }).start();
         return new Lwjgl3Application(new Main(), getDefaultConfiguration());
     }
 
